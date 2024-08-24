@@ -15,6 +15,11 @@ pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
 
 # Load pre-trained model
 model = SentenceTransformer('sentence-transformers/multi-qa-mpnet-base-dot-v1')
+# Example usage:
+from transformers import AutoTokenizer
+
+tokenizer = AutoTokenizer.from_pretrained("sentence-transformers/multi-qa-mpnet-base-dot-v1")
+tokenizer.clean_up_tokenization_spaces = True  # Explicitly set it if needed
 
 # Create or connect to the Pinecone index
 index = pc.Index("rmp")
