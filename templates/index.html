@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proflens</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='twobg.png') }}">
+        <form method="POST">
+            <label for="url">Professor Page URL:</label>
+            <input type="url" id="url" name="url" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- This div will display messages returned by the server -->
+        <div class="message-box" id="messageBox" style="display: none;"></div>
+    </div>
+
+</body>
+
+</html>
