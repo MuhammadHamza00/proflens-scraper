@@ -113,4 +113,4 @@ def process_and_store_data(data):
     print(index.describe_index_stats())
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
