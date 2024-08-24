@@ -7,6 +7,8 @@ from dotenv import load_dotenv
 load_dotenv()
 import os
 app = Flask(__name__)
+import warnings
+warnings.filterwarnings("ignore", category=FutureWarning)
 
 # Initialize Pinecone
 pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
